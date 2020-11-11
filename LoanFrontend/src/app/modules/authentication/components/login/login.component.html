@@ -1,0 +1,27 @@
+
+<form class="login-form" #loginForm="ngForm" (ngSubmit)="loginUser()">
+    <div class="login-block" >
+        <div class="row">
+            <h3>Login User</h3>
+        </div>
+        <div class="row">
+            <div *ngIf="validError">
+                <p style="color:red">{{errorReason}}</p>
+            </div> 
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input class="inputID" id="userId" autocomplete="off" matInput placeholder="UserId" [(ngModel)]="newUser.userId" name="userId" required minlength="5">
+            </mat-form-field>
+
+            <mat-form-field class="login-input-full-width">
+                <input class="inputPass" id="password" autocomplete="off" matInput placeholder="Password" type="password" [(ngModel)]="newUser.password" name="password" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button class="login-user" mat-raised-button color="primary" type="submit">Login</button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="button" mat-raised-button class="register-button" color="primary" [routerLink]="['/register']">Register</button>
+        </div>
+    </div>
+</form>

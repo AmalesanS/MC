@@ -1,0 +1,16 @@
+{
+	"name":"package",
+	"version":"1.0.0",
+	"description":"Loan application helps customers to apply for loan. User can register and apply for loans",
+	"main":"karma.conf.js",
+	"dependencies":{
+	"express":"^4.16.3"
+	},
+	"devDependencies":{},
+	"scripts":{
+	"test":"echo \"Error:No Test specified\" && exit 1",
+	"start":"node server.js"
+	},
+	"author":"",
+	"license":""
+}

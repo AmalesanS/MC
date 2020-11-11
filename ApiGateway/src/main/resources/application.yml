@@ -1,0 +1,30 @@
+server:
+  port:  8080
+spring:
+  application:
+    name: api-gateway
+zuul:
+  routes:
+    auth-service:
+      path: /api/auth/*
+      url: http://localhost:8085/api/v1/userService
+    loan-service:
+      path: /api/loan/*
+      url: http://localhost:8086/api/v1/loanService
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ConnectTimeout: 4000
+  ReadTimeout: 4000
+  
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace

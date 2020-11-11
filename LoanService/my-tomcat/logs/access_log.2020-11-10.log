@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [10/Nov/2020:21:52:18 -0500] "OPTIONS /api/v1/loanService HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2020:21:52:19 -0500] "POST /api/v1/loanService HTTP/1.1" 201 107
+0:0:0:0:0:0:0:1 - - [10/Nov/2020:21:52:19 -0500] "GET /api/v1/loanService HTTP/1.1" 200 488
+0:0:0:0:0:0:0:1 - - [10/Nov/2020:21:56:26 -0500] "GET /api/v1/loanService HTTP/1.1" 200 12

@@ -1,0 +1,26 @@
+<div class="view-block">
+    <div class="row">
+        <h3>View all loans</h3>
+    </div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Loan ID</th>
+            <th scope="col">Loan Type</th>
+            <th scope="col">Loan Amount</th>
+            <th scope="col">Rate of Interest</th>
+            <th scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let loan of loanList">
+                <th scope="row">{{loan.id}}</th>
+                <td>{{loan.loanType}}</td>
+                <td>{{loan.loanAmount}}</td>
+                <td>{{loan.rateOfInt}} %</td>
+                <td>{{loan.tenure}} Years</td>
+            </tr> 
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,33 @@
+<form class="loan-form" #registerForm="ngForm" (ngSubmit)="applyLoan()" style="height: 500px;overflow: auto;">
+    <div class="loan-block" >
+        <div class="row">
+            <h3>Apply a new loan</h3>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input class="loanTypeId" id="loanType" autocomplete="off" matInput placeholder="Loan Type" [(ngModel)]="newLoan.loanType" name="loanType" required minlength="5">
+            </mat-form-field>
+        </div>
+        
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="loanAmount" autocomplete="off" matInput placeholder="Loan Amount" [(ngModel)]="newLoan.loanAmount" name="loanAmount" required minlength="3">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="rateOfInt" autocomplete="off" matInput placeholder="Rate Of Interest" [(ngModel)]="newLoan.rateOfInt" name="rateOfInt" required minlength="1">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="duration" autocomplete="off" matInput placeholder="Duration" [(ngModel)]="newLoan.tenure" name="Duration" required minlength="1">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button class="register-user" mat-raised-button color="primary" type="submit" >Apply Loan</button>
+            &nbsp;&nbsp;&nbsp;
+            <button mat-raised-button type="button" color="primary" (click)="resetInput()">Clear</button>
+        </div>
+    </div>
+</form>

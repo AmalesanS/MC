@@ -1,0 +1,54 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.update-key{
+    font-weight: bold;
+    color: blue;
+    text-align: left;
+}
+
+.update-block{
+    margin:auto;
+    width:50%;
+    padding:10px;
+    padding-top:50px;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.register-input-full-width{
+    width:100%;
+}
+
+.h3{
+    text-align: center;
+}
+
+tr{
+  border-top: hidden;
+}
+
+
+table td, .table th {
+  padding: .15rem;
+}

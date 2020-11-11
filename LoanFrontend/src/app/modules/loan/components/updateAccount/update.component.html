@@ -1,0 +1,129 @@
+<div *ngIf="editForm">
+<form class="update-form" #updateForm="ngForm" (ngSubmit)="updateAccount()" style="height: 500px;overflow: auto;">
+    <div class="update-block" >
+        <div class="row">
+            <h3>Update Account Details</h3>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="name" autocomplete="off" matInput placeholder="Name" [(ngModel)]="newUser.name" name="name" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input class="inputPass" id="password" autocomplete="off" matInput placeholder="Password" type="password" [(ngModel)]="newUser.password" name="password" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="state" autocomplete="off" matInput placeholder="State" [(ngModel)]="newUser.state" name="state" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="country" autocomplete="off" matInput placeholder="Country" [(ngModel)]="newUser.country" name="country" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="email" autocomplete="off" matInput placeholder="Email" [(ngModel)]="newUser.email" name="email" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="address" autocomplete="off" matInput placeholder="Address" [(ngModel)]="newUser.address" name="address" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="pan" autocomplete="off" matInput placeholder="Pan" [(ngModel)]="newUser.pan" name="pan" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="contactNo" autocomplete="off" matInput placeholder="Contact No" [(ngModel)]="newUser.contactNo" name="contactNo" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="accountType" autocomplete="off" matInput placeholder="Account Type" [(ngModel)]="newUser.accountType" name="accountType" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="dob" autocomplete="off" matInput placeholder="Date of Birth" [(ngModel)]="newUser.dob" name="dob" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button class="register-user" mat-raised-button color="primary" type="submit" >Update Account</button>
+        </div>
+    </div>
+</form>
+</div>
+<div *ngIf="!editForm">
+    <form class="update-edit-form" #updateForm="ngForm" (ngSubmit)="editUpdateForm()" style="height: 500px;overflow: auto;">
+        <div class="update-block" >
+
+            <div class="row">
+                <h3>Update Account Details</h3>
+            </div>
+            <table class="table borderless">
+               
+                <tbody>
+                 <tr>        
+                    <td class="w-10 update-key">User ID</td>
+                    <td >{{newUser.userId}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Name</td>
+                    <td>{{newUser.name}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">State </td>
+                    <td>{{newUser.state}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Country </td>
+                    <td>{{newUser.country}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Email </td>
+                    <td>{{newUser.email}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Address </td>
+                    <td>{{newUser.address}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Pan </td>
+                    <td>{{newUser.pan}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Contact No </td>
+                    <td>{{newUser.contactNo}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">Account Type </td>
+                    <td>{{newUser.accountType}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key">DOB </td>
+                    <td>{{newUser.dob}}</td>
+                  </tr>
+                  <tr>
+                    <td class="w-10 update-key"> </td>
+                    <td>   </td>
+                  </tr>
+                  <tr>
+                    <td style="align-content:right">
+                        <button class="edit-user" mat-raised-button color="primary" type="submit" >Edit Account Details</button>    
+                    </td>
+                    <td>
+                        <button mat-raised-button type="button" color="primary" (click)="cancelEdit()">Cancel</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,73 @@
+<form class="register-form" #registerForm="ngForm" (ngSubmit)="registerUser()" style="height: 500px;overflow: auto;">
+    <div class="register-block" >
+        <div class="row">
+            <h3>Register User</h3>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input class="inputID" id="userId" autocomplete="off" matInput placeholder="UserId" [(ngModel)]="newUser.userId" name="userId" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="name" autocomplete="off" matInput placeholder="name" [(ngModel)]="newUser.name" name="name" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input class="inputPass" id="password" autocomplete="off" matInput placeholder="Password" type="password" [(ngModel)]="newUser.password" name="password" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="state" autocomplete="off" matInput placeholder="state" [(ngModel)]="newUser.state" name="state" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="country" autocomplete="off" matInput placeholder="country" [(ngModel)]="newUser.country" name="country" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="email" autocomplete="off" matInput placeholder="email" [(ngModel)]="newUser.email" name="email" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="address" autocomplete="off" matInput placeholder="address" [(ngModel)]="newUser.address" name="address" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="pan" autocomplete="off" matInput placeholder="pan" [(ngModel)]="newUser.pan" name="pan" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="contactNo" autocomplete="off" matInput placeholder="contactNo" [(ngModel)]="newUser.contactNo" name="contactNo" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="accountType" autocomplete="off" matInput placeholder="accountType" [(ngModel)]="newUser.accountType" name="accountType" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="dob" autocomplete="off" matInput placeholder="dob" [(ngModel)]="newUser.dob" name="dob" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="login-input-full-width">
+                <input id="createdDate" autocomplete="off" matInput placeholder="createdDate" [(ngModel)]="newUser.createdDate" name="createdDate" required minlength="5">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button class="register-user" mat-raised-button color="primary" type="submit" >Register User</button>
+            
+            &nbsp;&nbsp;&nbsp;
+            <button mat-raised-button type="button" color="primary" (click)="resetInput()">Clear</button>
+        </div>
+    </div>
+</form>
